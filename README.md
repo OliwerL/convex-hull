@@ -25,7 +25,7 @@ This Python script simulates the movement of tigers across a two-dimensional spa
 - Collects all points representing the tigers.
 - Finds the lowest point to start the path visualization.
 - Draws each tiger and their path using matplotlib.
-<pre>
+```python
 def generate_random_tigers():
     points = np.random.rand(20, 2) * 100
     tigers = []
@@ -41,12 +41,12 @@ def draw_tiger(tiger):
       x1, y1 = points[i]
       x2, y2 = points[i + 1]
       plt.plot([x1, x2], [y1, y2], color='green')
-</pre>
+```
 
 ### Visualization
 - Uses matplotlib to plot the positions and paths of tigers.
 - Updates the positions of tigers in each iteration to simulate continuous movement.
-<pre>
+```python
 def draw_point(tigers):
     x = []
     y = []
@@ -58,7 +58,7 @@ def draw_point(tigers):
 
 def draw_line(x1, y1, x2, y2):
     plt.plot([x1, x2], [y1, y2], color='red')
-</pre>
+```
 
 ### Conclusion
 This simulation showcases the basic principles of object-oriented programming, linear transformations, and data visualization in Python. It provides a foundation for more complex simulations involving moving entities and their interactions.
