@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 class Tiger:
     def __init__(self, x, y):
+        # Initialization with position, direction, and other parameters
         self.x = x
         self.y = y
         self.b = 2
@@ -15,7 +16,7 @@ class Tiger:
 
 
     def get_position(self):
-        """Zwraca aktualną pozycję Tigera."""
+        # Generates points representing the tiger's shape
         return (f'{self.x}, {self.y}')
 
     def generate_points(self):
@@ -49,7 +50,6 @@ class Tiger:
             rotated_points.append((x_rotated, y_rotated))
 
         for x, y in original_points_2:
-            # Przesunięcie punktów, aby środek obrotu był w (0,0)
             x_shifted, y_shifted = x - self.x, y - self.y
             print(x_shifted, y_shifted)
 
@@ -98,6 +98,7 @@ class Tiger:
         return rotated_points
 
     def move_points(self):
+        # Translates the tiger's points to simulate movement
         moved_points = []
         for x, y in self.points:
             dx = np.cos(self.alfa) * 10
